@@ -113,7 +113,7 @@ exports.complies = (grunt, compe) ->
             #检查是否有对应css的icon样式有的话加入其中
             strArr = putCss.slice(putCss.lastIndexOf('/')+1, putCss.length - 4)
 
-            patt = new RegExp "(icon|i)-#{strArr}[0-9]*[-.]"
+            patt = new RegExp "(icon|i)-#{strArr}[0-9]*\."
             iconFiles = shell.find(distIconCss).filter (file)->
               file.match( patt )
 
