@@ -137,7 +137,7 @@
             return compe(putfile, options, function(css, err) {
               var e, iconFiles, patt, strArr, tempCss;
               strArr = putCss.slice(putCss.lastIndexOf('/') + 1, putCss.length - 4);
-              patt = new RegExp("(icon|i)-" + strArr + "[0-9]*[-.]");
+              patt = new RegExp("(icon|i)-" + strArr + "[0-9]*\.");
               iconFiles = shell.find(distIconCss).filter(function(file) {
                 return file.match(patt);
               });
